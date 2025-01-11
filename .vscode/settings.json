@@ -56,5 +56,10 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Practica01_IntroduccionProyecto2D.sln"
+    "dotnet.defaultSolution": "Practica01_IntroduccionProyecto2D.sln",
+    "githubPullRequests.remotes": [
+        "origin",
+        "upstream",
+        "main"
+    ]
 }
