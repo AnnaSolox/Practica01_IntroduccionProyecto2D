@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class NewMonoBehaviourScript : MonoBehaviour
@@ -5,7 +6,6 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private Color originalColor;
     private SpriteRenderer blockRenderer;
     private AudioSource audioSource;
-    public float colorChangeDuration = 0.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,10 +43,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator CambiarColorTemporalmente(Color newColor)
+    private IEnumerator CambiarColorTemporalmente(Color newColor)
     {
             blockRenderer.color = newColor;
-            yield return new WaitForSeconds(colorChangeDuration); 
+            yield return new WaitForSeconds(0.5f); 
             Debug.Log("Color cambiado a amarillo en: " + gameObject.name);
 
             blockRenderer.color = originalColor;
